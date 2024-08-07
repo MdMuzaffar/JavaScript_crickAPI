@@ -29,22 +29,57 @@ console.timeEnd("10");
 
 // setTimeoutOutput
 
-function a() {
-    setTimeout(() => {
-        for (let i = 0; i < 3; i++) {
-            console.log(i);
-        }
-    }, 1000);
-}
-a();
+// function a() {
+//     setTimeout(() => {
+//         for (let i = 0; i < 3; i++) {
+//             console.log(i);
+//         }
+//     }, 1000);
+// }
+// a();
 
-for (var i = 0; i < 4; i++) {
-    function inner(i) {
-        setTimeout(() => {
-            // for (let i = 0; i < 3; i++) {
-            console.log(i);
-            // }
-        }, 1000);
+// for (var i = 0; i < 4; i++) {
+//     function inner(i) {
+//         setTimeout(() => {
+//             console.log(i);
+//         }, 1000);
+//     }
+//     inner(i);
+// }
+//Closure to use private counter
+
+function counter() {
+    var count = 0;
+
+    function add(increament) {
+        count += increament;
     }
-    inner(i);
+
+    function retrive() {
+        return "Counter  = " + count;
+    }
+    return {
+        add,
+        retrive
+    }
 }
+const c = counter();
+c.add(5);
+c.add(10);
+console.log(c.retrive());
+
+// Module pattern
+
+var Module = (function() {
+    function privateMethod() {
+        console.log("Private Method");
+    }
+    return {
+        publicMethod: function() {
+            console.log("Public Method");
+        }
+    }
+})();
+
+Module.publicMethod();
+Module.privateMethod();
