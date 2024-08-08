@@ -82,4 +82,25 @@ var Module = (function() {
 })();
 
 Module.publicMethod();
-Module.privateMethod();
+// Module.privateMethod();
+
+//currying in javascript
+
+function f(a) {
+    return function(b) {
+        return `${a} ${b}`;
+    }
+}
+
+console.log(f(5)(6))
+
+function sum(a) {
+    return function(b) {
+        return function(c) {
+            return a + b + c;
+        }
+    }
+}
+
+
+console.log(sum(2)(6)(1));
