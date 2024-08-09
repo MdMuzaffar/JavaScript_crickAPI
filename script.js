@@ -104,3 +104,31 @@ function sum(a) {
 
 
 console.log(sum(2)(6)(1));
+
+function myMemoize(fn, context) {
+
+    const res = {};
+    return function(...args) {
+        var argCatche = JSON.stringify(args)
+        if (!res[argCatche]) {
+            res[argCatche] = fn.call(context || this, ...args)
+        }
+        return res[argCatche];
+    };
+}
+
+const clumsProduct = (num1, num2) => {
+    for (let i = 1; i < 100000; i++) {
+
+    }
+    return num1 * num2;
+}
+
+const memoizeProduct = myMemoize(clumsProduct);
+console.time("first Memoize");
+console.log(memoizeProduct(222, 333));
+console.timeEnd("first call");
+
+console.time("second Memoize");
+console.log(memoizeProduct(222, 333));
+console.timeEnd("second call");
