@@ -127,8 +127,30 @@ const clumsProduct = (num1, num2) => {
 const memoizeProduct = myMemoize(clumsProduct);
 console.time("first Memoize");
 console.log(memoizeProduct(222, 333));
-console.timeEnd("first call");
+console.timeEnd("first Memoize");
 
 console.time("second Memoize");
 console.log(memoizeProduct(222, 333));
-console.timeEnd("second call");
+console.timeEnd("second Memoize");
+
+function evaluate(operation) {
+    return function(a) {
+        return function(b) {
+            if (operation === "sum") return a + b;
+            else if (operation === "substract") return a - b;
+            else if (operation === "divide") return a / b;
+            else if (operation === "multiply") return a * b;
+            else return " Invalid Operation";
+        }
+    }
+}
+
+const evlFun = evaluate("sum");
+
+console.log(evlFun(5)(5));
+console.log(evlFun(5)(50));
+
+console.log(evaluate("sum")(4)(4));
+console.log(evaluate("substract")(4)(4));
+console.log(evaluate("divide")(4)(4));
+console.log(evaluate("multiply")(4)(4));
