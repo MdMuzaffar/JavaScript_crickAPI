@@ -154,3 +154,14 @@ console.log(evaluate("sum")(4)(4));
 console.log(evaluate("substract")(4)(4));
 console.log(evaluate("divide")(4)(4));
 console.log(evaluate("multiply")(4)(4));
+
+// Infinite currying
+
+function sumCheck(a) {
+    return function(b) {
+        if (b) return sumCheck(a + b);
+        return a;
+    }
+}
+
+console.log(sumCheck(1)(2)(3)(4)(5)(6)());
