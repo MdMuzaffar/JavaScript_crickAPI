@@ -165,3 +165,14 @@ function sumCheck(a) {
 }
 
 console.log(sumCheck(1)(2)(3)(4)(5)(6)());
+
+function multiply(a) {
+    return function(b) {
+        if (b !== undefined) {
+            return multiply(a * b);
+        }
+        return a;
+    }
+}
+
+console.log(multiply(2)(3)(4)(5)());
