@@ -176,3 +176,23 @@ function multiply(a) {
 }
 
 console.log(multiply(2)(3)(4)(5)());
+
+
+console.log("start");
+
+const sub = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        const result = true;
+        if (result) resolve("subscribe successfully");
+        else reject(new error("why have you not subscribe?"))
+    }, 2000);
+})
+
+sub.then((res) => {
+    console.log(res);
+}).catch((err) => {
+    console.log(err)
+});
+
+
+console.log("stop");
