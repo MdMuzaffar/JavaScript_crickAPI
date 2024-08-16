@@ -184,7 +184,7 @@ const sub = new Promise((resolve, reject) => {
     setTimeout(() => {
         const result = true;
         if (result) resolve("subscribe successfully");
-        else reject(new error("why have you not subscribe?"))
+        else reject(new Error("why have you not subscribe?"))
     }, 2000);
 })
 
@@ -196,3 +196,28 @@ sub.then((res) => {
 
 
 console.log("stop");
+
+
+const subpromise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        const rest = true;
+        if (rest) resolve("subscribed");
+        else reject(new Error("Not Subscribe"))
+    }, 3000)
+})
+subpromise.then((res) => {
+    console.log(res)
+}).catch((rej) => {
+    console.log(rej)
+})
+console.log("-------------------------------")
+
+function fun1() {
+    return 2
+}
+
+function fun2() {
+    return 4
+}
+let a = ((fun1), (fun2));
+console.log(a);
