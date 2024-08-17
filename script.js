@@ -206,11 +206,10 @@ const subpromise = new Promise((resolve, reject) => {
     }, 3000)
 })
 subpromise.then((res) => {
-    console.log(res)
+    // console.log(res)
 }).catch((rej) => {
-    console.log(rej)
+    // console.log(rej)
 })
-console.log("-------------------------------")
 
 function fun1() {
     return 2
@@ -221,3 +220,36 @@ function fun2() {
 }
 let a = ((fun1), (fun2));
 console.log(a);
+
+
+const arr = ["one", "two", "three"];
+
+const res = arr.includes('one');
+
+console.log(res);
+
+console.log('1' == 1);
+console.log(true == ' ');
+let x = 10;
+let y = new Number(10);
+let z = 10;
+
+
+
+console.log(x === y);
+console.log("-------------------------------");
+
+console.log(+true);
+console.log(!"xyz");
+console.log("-------------------------------")
+
+function currying(a) {
+    return function(b) {
+        if (b) return currying(a * b);
+        return a;
+    }
+}
+
+// const summ =
+console.log(currying(1)(2)(3)());
+// console.log(sum);
