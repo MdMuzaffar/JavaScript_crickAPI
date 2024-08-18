@@ -253,3 +253,15 @@ function currying(a) {
 // const summ =
 console.log(currying(1)(2)(3)());
 // console.log(sum);
+
+// json.stringfy and josn.parse
+
+const user = {
+    name: "Muzaffar",
+    age: 36
+}
+
+const strObj = JSON.stringify(user);
+
+console.log(strObj)
+console.log(JSON.parse(strObj))
