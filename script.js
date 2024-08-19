@@ -265,3 +265,13 @@ const strObj = JSON.stringify(user);
 
 console.log(strObj)
 console.log(JSON.parse(strObj))
+
+const seting = {
+    userName: " Muzafffar",
+    level: 2,
+    Health: 90
+}
+
+const data = JSON.stringify(seting, ["level", "Health"])
+
+console.log(data);
