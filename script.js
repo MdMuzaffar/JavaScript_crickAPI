@@ -275,3 +275,20 @@ const seting = {
 const data = JSON.stringify(seting, ["level", "Health"])
 
 console.log(data);
+
+const nums = [1, 2, 3, 4];
+const nums1 = [5, 6, 7, 8];
+
+const sumRes = [...nums, ...nums1]
+
+console.log(sumRes)
+
+function sums(...numbers) {
+    return numbers;
+}
+
+console.log(sums(nums, nums1, 5, "hello"));
+//Concat
+const sumConcat = nums.concat(nums1, seting);
+
+console.log(sumConcat)
