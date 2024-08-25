@@ -292,3 +292,58 @@ console.log(sums(nums, nums1, 5, "hello"));
 const sumConcat = nums.concat(nums1, seting);
 
 console.log(sumConcat)
+
+// flatter Array
+
+const flattenArray = [1, 2, [3, 4],
+    [
+        [5, 6], 7
+    ]
+]
+const flatArray = flattenArray.flat(2)
+
+console.log(flatArray)
+
+// find secondLargest number
+
+function secondLargest(arr) {
+    let largest = Number.NEGATIVE_INFINITY;
+    let secondLarg = Number.NEGATIVE_INFINITY;
+    for (let num of arr) {
+        if (num > largest) {
+            secondLarg = largest;
+            largest = num
+        } else if (num > secondLarg) {
+            secondLarg = num;
+        }
+    }
+
+    return secondLarg;
+}
+
+const numberss = [10, 5, 20, 3, 15, 20];
+console.log(numberss)
+const secondLargestNum = secondLargest(numberss);
+console.log("Second largest number:", secondLargestNum);
+
+
+// function findSecondLargest(arr) {
+//     let largest = Number.MIN_SAFE_INTEGER;
+//     let secondLargest = Number.MIN_SAFE_INTEGER;
+
+//     for (let num of arr) {
+//         if (num > largest) {
+//             secondLargest = largest;
+//             largest = num;
+//         } else if (num > secondLargest) {
+//             secondLargest = num;
+//         }
+//     }
+
+//     return secondLargest;
+// }
+
+// // Example usage:
+// const numbers = [10, 5, 20, 3, 15, 20];
+// const secondLargests = findSecondLargest(numbers);
+// console.log("Second largest number:", secondLargests);
