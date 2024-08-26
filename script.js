@@ -347,3 +347,17 @@ console.log("Second largest number:", secondLargestNum);
 // const numbers = [10, 5, 20, 3, 15, 20];
 // const secondLargests = findSecondLargest(numbers);
 // console.log("Second largest number:", secondLargests);
+
+function sumEvenNumbers(arr) {
+    let sum = 0;
+    for (let num of arr) {
+        if (num % 2 === 0) {
+            sum += num;
+        }
+    }
+    return sum;
+}
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+const evenSum = sumEvenNumbers(numbers);
+console.log("Sum of even numbers:", evenSum);
