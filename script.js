@@ -361,3 +361,18 @@ function sumEvenNumbers(arr) {
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
 const evenSum = sumEvenNumbers(numbers);
 console.log("Sum of even numbers:", evenSum);
+
+// Linear Search
+
+// linearNums = [2, 3, 1, 0, 4, 7]
+
+const linearSearch = (nums, target) => {
+    for (let i = 0; i < nums.length; i++) {
+        if (target === nums[i]) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+console.log(linearSearch([2, 3, 5, 1, 8, 0], 1))
