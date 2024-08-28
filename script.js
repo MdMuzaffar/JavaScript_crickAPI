@@ -375,4 +375,27 @@ const linearSearch = (nums, target) => {
     return -1;
 }
 
-console.log(linearSearch([2, 3, 5, 1, 8, 0], 1))
+console.log(linearSearch([2, 3, 5, 1, 8, 0], 1));
+
+
+// Binary search Algorithm
+
+function search(nums, target) {
+    let start = 0;
+    let end = nums.length - 1;
+
+    while (start <= end) {
+        let middle = Math.floor((start + end) / 2);
+        if (nums[middle] === target) {
+            return middle;
+        } else if (nums[middle] <= target) {
+            start = middle + 1
+        } else {
+            end = middle - 1;
+        }
+
+    }
+    return -1;
+
+}
+console.log(search([2, 3, 5, 1, 8, 0], 8));
