@@ -398,4 +398,33 @@ function search(nums, target) {
     return -1;
 
 }
+
+console.log("----------------------------------")
 console.log(search([2, 3, 5, 1, 8, 0], 8));
+
+// find 5th missing positive number
+function findMissingNumbrt(arr, k) {
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] <= k + count) {
+            count++;
+        }
+    }
+
+    return k + count;
+}
+
+console.log(findMissingNumbrt([2, 4, 6, 9, 11], 5))
+
+13578
+
+
+function findkthmissing(arr, k) {
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] <= k + count) {
+            count++;
+        }
+    }
+    return k + count;
+}
