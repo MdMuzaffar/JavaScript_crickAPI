@@ -428,3 +428,17 @@ function findkthmissing(arr, k) {
     }
     return k + count;
 }
+
+// Recurssion\
+
+function findrangOfNumber(startNumber, endNumber) {
+    if (endNumber < startNumber) {
+        return [];
+    } else {
+        const number = findrangOfNumber(startNumber, endNumber - 1);
+        number.push(endNumber);
+        return number;
+    }
+}
+
+console.log(findrangOfNumber(1, 5))
