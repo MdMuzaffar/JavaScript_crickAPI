@@ -468,3 +468,14 @@ function truncate(str, maxlength) {
 }
 
 console.log(truncate("Muzaffar Ahmed is a Coder", 8))
+
+function truncate(str, maxLength) {
+    if (str.length > maxLength) {
+        return str.slice(0, maxLength - 3) + '...';
+    } else {
+        return str;
+    }
+}
+const originalString = "This is a long string that needs to be truncated.";
+const truncatedString = truncate(originalString, 10);
+console.log(truncatedString);
