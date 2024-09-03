@@ -479,3 +479,35 @@ function truncate(str, maxLength) {
 const originalString = "This is a long string that needs to be truncated.";
 const truncatedString = truncate(originalString, 10);
 console.log(truncatedString);
+
+
+// Async / await
+
+const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("waiting for the result")
+    }, 3000);
+});
+async function getData() {
+    let result = await promise;
+    console.log(result);
+};
+
+getData();
+
+
+
+const prom = new Promise((resolve, reject) => {
+    setTimeout(() => { resolve("get data") }, 3000);
+});
+async function dataget() {
+    let res = await prom;
+    console.log(res);
+};
+dataget();
+
+let result1 = document.getElementById('result');
+
+function fetch1() {
+    result1.innerText = "fetching data..."
+}
