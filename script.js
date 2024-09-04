@@ -510,4 +510,14 @@ let result1 = document.getElementById('result');
 
 function fetch1() {
     result1.innerText = "fetching data..."
-}
+};
+
+let proms = new promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("Getting Data")
+    }, 3000);
+});
+
+async function getDaata() {
+    let res = await proms;
+};
