@@ -512,12 +512,28 @@ function fetch1() {
     result1.innerText = "fetching data..."
 };
 
-let proms = new promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve("Getting Data")
-    }, 3000);
-});
+// let proms = new promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve("Getting Data")
+//     }, 3000);
+// });
 
 async function getDaata() {
     let res = await proms;
 };
+
+// truncatedString()
+
+function truncate(str, maxLength) {
+    if (str.length > maxLength) {
+        return str.slice(0, maxLength - 3) + '...';
+    } else {
+        return str;
+    }
+}
+
+const originalStrings = "This is a long string that needs to be truncated.";
+const truncatedStrings = truncate(originalString, 15);
+console.log("Testing", truncatedString); // Output: "This is a..."
+
+// console.log(truncate("Hello Muzaffar"))
