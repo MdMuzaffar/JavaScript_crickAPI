@@ -537,3 +537,29 @@ const truncatedStrings = truncate(originalString, 15);
 console.log("Testing", truncatedString); // Output: "This is a..."
 
 // console.log(truncate("Hello Muzaffar"))
+
+console.log("--------------------------------------------------------------");
+
+
+function fruit() {
+
+
+    name = "mango";
+    let price = 40;
+    console.log(name);
+    console.log(price);
+
+    var name = "Bananaa";
+    // let price = 20;
+}
+
+fruit();
+
+function printNumbers(n) {
+    for (let i = 0; i < n; i++) {
+        const square = i * i;
+        console.log(i, square);
+    }
+}
+
+printNumbers(5);
