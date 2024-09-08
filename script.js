@@ -563,3 +563,30 @@ function printNumbers(n) {
 }
 
 printNumbers(5);
+
+
+// -----------------------MAP
+
+const myMap = new Map();
+
+myMap.set("key1", "value1")
+myMap.set("key2", "value2")
+myMap.set("key3", "value3")
+console.log(myMap)
+
+const value = myMap.get("key1")
+console.log(value)
+
+const exists = myMap.has("key2")
+console.log(exists)
+
+const students = new Map();
+students.set("Ali", { age: 20, grade: "A" });
+students.set("Bacha", { age: 22, grade: "B+" });
+students.set("Cute", { age: 19, grade: "B" });
+
+console.log(students.get("Ali"));
+
+for (const [name, student] of students) {
+    console.log(name, student.age, student.grade);
+}
