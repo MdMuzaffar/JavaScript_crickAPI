@@ -590,3 +590,12 @@ console.log(students.get("Ali"));
 for (const [name, student] of students) {
     console.log(name, student.age, student.grade);
 }
+const student = {
+    name: "Md Ahmed",
+    age: 35,
+    grade: "A",
+    courses: ["Math", "Science", "History"]
+};
+
+console.log(student.name);
+console.log(student.courses[1]);
