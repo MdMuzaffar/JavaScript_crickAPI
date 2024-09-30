@@ -599,3 +599,21 @@ const student = {
 
 console.log(student.name);
 console.log(student.courses[1]);
+
+// adding new data into existing data
+import data from "./data.js";
+const license = {
+    license: "Unplash License",
+    licenseURL: "https://google.com/data"
+}
+
+const newData = data.map((imgData) => {
+    const newImgData = {...imgData, ...license };
+    return newImgData;
+})
+
+
+const newDat = data.map((itemData) => {
+    const concatData = {...itemData, ...licenseData }
+    return concatData;
+})
