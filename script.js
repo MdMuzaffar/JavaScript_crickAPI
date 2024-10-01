@@ -616,4 +616,13 @@ const newData = data.map((imgData) => {
 const newDat = data.map((itemData) => {
     const concatData = {...itemData, ...licenseData }
     return concatData;
+
 })
+
+getCatgegory$: Observable < any >
+
+
+    this.getCatgegory$ = this.service.product().pipe(map((item) => {
+        return item.data;
+        console.log(data)
+    }))
