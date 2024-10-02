@@ -601,28 +601,49 @@ console.log(student.name);
 console.log(student.courses[1]);
 
 // adding new data into existing data
-import data from "./data.js";
-const license = {
-    license: "Unplash License",
-    licenseURL: "https://google.com/data"
+// import data from "./data.js";
+// const license = {
+//     license: "Unplash License",
+//     licenseURL: "https://google.com/data"
+// }
+
+// const newData = data.map((imgData) => {
+//     const newImgData = {...imgData, ...license };
+//     return newImgData;
+// })
+
+
+// const newDat = data.map((itemData) => {
+//     const concatData = {...itemData, ...licenseData }
+//     return concatData;
+
+// })
+
+// getCatgegory$: Observable < any >
+
+
+//     this.getCatgegory$ = this.service.product().pipe(map((item) => {
+//         return item.data;
+//         console.log(data)
+//     }))
+
+let products = ['socks:2.09', 'jacket:85.9'];
+
+for (let i = 0; i < products.length; i++) {
+    const subArray = products[i].split(':');
+    const name = subArray[0];
+    const price = Number(subArray[1]);
+    console.log('sub Array', subArray, name, price)
 }
 
-const newData = data.map((imgData) => {
-    const newImgData = {...imgData, ...license };
-    return newImgData;
-})
-
-
-const newDat = data.map((itemData) => {
-    const concatData = {...itemData, ...licenseData }
-    return concatData;
-
-})
-
-getCatgegory$: Observable < any >
-
-
-    this.getCatgegory$ = this.service.product().pipe(map((item) => {
-        return item.data;
-        console.log(data)
-    }))
+function person(name) {
+    const obj = {};
+    obj.name = name;
+    obj.greeting = function() {
+        alert('Hi' + obj.name + '.');
+    }
+    return obj;
+}
+const salve = person('Salva');
+salve.name;
+salve.greeting();
