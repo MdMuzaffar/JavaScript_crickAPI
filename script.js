@@ -647,3 +647,19 @@ function person(name) {
 const salve = person('Salva');
 salve.name;
 salve.greeting();
+
+const numbers2 = [1, 2, 3, 4, 5];
+
+const isEven = (value) => value % 2 === 0;
+
+const hasEvenNumber = numbers2.some(isEven);
+console.log(hasEvenNumber);
+
+const users = [
+    { name: "Alice", age: 25 },
+    { name: "Bob", age: 30 },
+    { name: "Charlie", age: 28 }
+];
+
+const hasUserWithExactMatch = users.some(user => user.name === "Alice");
+console.log(hasUserWithExactMatch);
