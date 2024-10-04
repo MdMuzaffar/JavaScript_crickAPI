@@ -640,7 +640,7 @@ function person(name) {
     const obj = {};
     obj.name = name;
     obj.greeting = function() {
-        alert('Hi' + obj.name + '.');
+        // alert('Hi' + obj.name + '.');
     }
     return obj;
 }
@@ -663,3 +663,17 @@ const users = [
 
 const hasUserWithExactMatch = users.some(user => user.name === "Alice");
 console.log(hasUserWithExactMatch);
+
+const person2 = {
+    name: "Muzaffar",
+    age: 35,
+    city: "Hyderabad"
+};
+
+const entries = Object.entries(person2);
+console.log("JS ebtries", entries);
+for (const [key, value] of entries) {
+    console.log(key, value);
+}
+const newObject = Object.fromEntries(entries);
+console.log(newObject);
