@@ -677,3 +677,25 @@ for (const [key, value] of entries) {
 }
 const newObject = Object.fromEntries(entries);
 console.log(newObject);
+
+console.log("----------------------------Object.Methods------------------------------------")
+const person3 = {};
+Object.defineProperty(person3, "name", {
+    value: "Ahmed",
+    writable: true,
+    configurable: true,
+    enumerable: true
+});
+
+console.log(person3.name.writable);
+
+const person4 = { name: 'Muzaffar', age: 36 };
+const person5 = { city: "Hyderabad" }
+
+const combinePersonData = Object.assign({}, person4, person5);
+console.log(combinePersonData);
+
+const person6 = { name: "Alice", age: 25 };
+const newPerson = Object.create(person6);
+newPerson.city = "New York";
+console.log(newPerson);
