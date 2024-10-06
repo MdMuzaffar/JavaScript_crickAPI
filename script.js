@@ -699,3 +699,15 @@ const person6 = { name: "Alice", age: 25 };
 const newPerson = Object.create(person6);
 newPerson.city = "New York";
 console.log(newPerson);
+
+const person7 = {
+    name: 'Ahmed',
+    age: 30,
+    city: 'Canada'
+};
+
+const filterProperties = Object.entries(person7).filter(([key, value]) => typeof value === "string")
+console.log(filterProperties);
+const selectedNames = ["name", "city"];
+const printSelected = Object.fromEntries(Object.entries(person7).filter(([key]) => selectedNames.includes(key)));
+console.log(printSelected)
