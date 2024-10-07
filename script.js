@@ -710,4 +710,11 @@ const filterProperties = Object.entries(person7).filter(([key, value]) => typeof
 console.log(filterProperties);
 const selectedNames = ["name", "city"];
 const printSelected = Object.fromEntries(Object.entries(person7).filter(([key]) => selectedNames.includes(key)));
-console.log(printSelected)
+console.log(printSelected);
+
+const ab = {
+    x: 10,
+    y: 20
+}
+ab.x = 100;
+console.log(ab)
