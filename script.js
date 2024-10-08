@@ -717,4 +717,17 @@ const ab = {
     y: 20
 }
 ab.x = 100;
-console.log(ab)
+console.log(ab);
+
+let arr1 = [1, 2, 3, 4];
+let result = arr1.find(num => num > 2);
+console.log(result);
+
+const nestedArrays = [
+    [1, 2],
+    [3, 4],
+    [5, 6]
+];
+
+const flatArray1 = nestedArrays.reduce((acc, val) => acc.concat(val), []);
+console.log(flatArray1)
