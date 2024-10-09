@@ -731,3 +731,12 @@ const nestedArrays = [
 
 const flatArray1 = nestedArrays.reduce((acc, val) => acc.concat(val), []);
 console.log(flatArray1)
+
+const numbers3 = [1, 2, 2, 3, 4, 4, 5];
+const uniqueNumber = numbers3.reduce((acc, current) => {
+    if (!acc.includes(current)) {
+        acc.push(current);
+    }
+    return acc;
+}, []);
+console.log(uniqueNumber);
