@@ -740,3 +740,7 @@ const uniqueNumber = numbers3.reduce((acc, current) => {
     return acc;
 }, []);
 console.log(uniqueNumber);
+
+const numbers4 = [5, 12, 8, 130, 44];
+const findLargestNumber = numbers4.reduce((acc, val) => (val > acc ? val : acc), numbers4[0]);
+console.log("find largest number", findLargestNumber)
