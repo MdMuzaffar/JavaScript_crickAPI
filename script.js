@@ -744,3 +744,16 @@ console.log(uniqueNumber);
 const numbers4 = [5, 12, 8, 130, 44];
 const findLargestNumber = numbers4.reduce((acc, val) => (val > acc ? val : acc), numbers4[0]);
 console.log("find largest number", findLargestNumber)
+
+const students3 = [
+    { name: 'Amd', score: 45 },
+    { name: 'Md', score: 22 },
+    { name: 'Muzaffar', score: 38 },
+    { name: 'Mohammed', score: 75 }
+];
+
+const totalScore = students3
+    .map(student => student.score)
+    .reduce((acc, score) => acc + score, 0);
+
+console.log(totalScore);
