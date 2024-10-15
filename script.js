@@ -757,3 +757,16 @@ const totalScore = students3
     .reduce((acc, score) => acc + score, 0);
 
 console.log(totalScore);
+
+// average of an array using reduce
+
+const numbers6 = [19, 24, 35, 42, 53];
+const average = numbers6.reduce((acc, current, index, array) => {
+    acc += current;
+    if (index === array.length - 1) {
+        return acc / array.length;
+    }
+    return acc;
+}, 0);
+
+console.log(average);
